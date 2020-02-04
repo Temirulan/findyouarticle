@@ -1,0 +1,26 @@
+<!-- templates/registration/login.html -->
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild3664-6335-4866-a434-393965316231/favicon.ico" type="image/x-icon">
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+</head>
+<body class="text-center">
+    <form method="post" class="form-signin">
+        {% csrf_token %}
+        <img class="mb-12" src="{% static 'logo.png' %}" alt="" width="200">
+        <label >Войдите на сайт</label>
+        <label for="id_username" class="sr-only">Email address</label>
+        <input type="text" id="id_username" name="username" class="form-control" placeholder="Электронный адрес" required autofocus>
+        <label for="id_password" class="sr-only">Password</label>
+        <input type="password" id="id_password" class="form-control" name="password" placeholder="Пароль" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form>
+</body>
+</html>

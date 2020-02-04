@@ -1,0 +1,123 @@
+<!-- templates/registration/login.html -->
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild3664-6335-4866-a434-393965316231/favicon.ico" type="image/x-icon">
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+<body class="text-center">
+    
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">FindYourArticles</a>
+  <div class="dropdown">
+    <img src="{% static 'Person_circle.png' %}" alt="Profile">
+    <div class="dropdown-content">
+        <a class="dropdown-item" href="#">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="col align-self-center">
+      <img src="{% static 'logo.png' %}" alt="logo">
+    </div>
+    <div class="col align-self-center">
+        <p class="strong">Составьте правила для поиска статей</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Автор" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="col-sm">
+            <input type="text" name="dates" class="form-control" placeholder="Год выпуска" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Направление" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Ключевые слова" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="col-sm">
+            <button class="btn btn-primary btn-block" type="submit">Найти</button>
+        </div>
+    </div>
+
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Автор</th>
+            <th scope="col">Дата издания</th>
+            <th scope="col">Названия</th>
+            <th scope="col">Область изучения</th>
+            <th scope="col">Ключевые слова</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>Иван Грозный</td>
+      <td>20 янв 1898</td>
+      <td>Возвращение блудного сына</td>
+      <td>Диабет</td>
+      <td>Ключевые слова</td>
+    </tr>
+    <tr>
+      <td>Иван Грозный</td>
+      <td>20 янв 1898</td>
+      <td>Возвращение блудного сына</td>
+      <td>Диабет</td>
+      <td>Ключевые слова</td>
+    </tr>
+    <tr>
+      <td>Иван Грозный</td>
+      <td>20 янв 1898</td>
+      <td>Возвращение блудного сына</td>
+      <td>Диабет</td>
+      <td>Ключевые слова</td>
+    </tr>
+    <tr>
+      <td>Иван Грозный</td>
+      <td>20 янв 1898</td>
+      <td>Возвращение блудного сына</td>
+      <td>Диабет</td>
+      <td>Ключевые слова</td>
+    </tr>
+    <tr>
+      <td>Иван Грозный</td>
+      <td>20 янв 1898</td>
+      <td>Возвращение блудного сына</td>
+      <td>Диабет</td>
+      <td>Ключевые слова</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+    <!--     <nav>
+        <ul>
+            <li>
+                <img class="right" src="{% static 'Person_circle.png' %}" alt="Profile">
+            </li>
+        </ul>
+    </nav> -->
+
+    <script type="text/javascript">
+        $('input[name="dates"]').daterangepicker();
+    </script>
+</body>
+</html>
